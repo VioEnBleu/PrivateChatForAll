@@ -1,34 +1,44 @@
-import socket
-import select
-import sys
- 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+from socket import *
+from threading import *
+from tkinter import *
 
-###Things you NEED to change###
-Port = 0
-IP = ""
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+
+#########################
+hostIp = ""
+portNumber = 0
 username = ""
-###############################
+#########################
 
-server.connect((str(IP), Port))
+clientSocket.connect((hostIp, portNumber))
+clientSocket.send(username.encode("utf-8"))
 
-while True:
- 
-    sockets_list = [sys.stdin, server]
+window = Tk()
+window.title("Untilted chat")
 
-    read_sockets,write_socket, error_socket = select.select(sockets_list,[],[])
- 
-    for socks in read_sockets:
-        if socks == server:
-            message = socks.recv(2048)
-            if message:
-                print (message.decode())
-        else:
-            
-            message = sys.stdin.readline()
-            
-            server.send(f"[{username}] >> {message}".encode())
-            sys.stdout.write("[Toi] >> ")
-            sys.stdout.write(message)
+txtMessages = Text(window, width=50)
+txtMessages.grid(row=0, column=0, padx=10, pady=10)
 
-server.close()
+txtYourMessage = Entry(window, width=50)
+txtYourMessage.grid(row=1, column=0, padx=10, pady=10)
+
+def sendMessage():
+    clientMessage = txtYourMessage.get()
+    txtYourMessage.delete(0,"end")
+    txtMessages.insert(END, "[Toi] >> "+ clientMessage + "\n")
+    clientSocket.send(f"[{username}] >> {clientMessage}".encode("utf-8"))
+
+btnSendMessage = Button(window, text="Send", width=20, command=sendMessage)
+btnSendMessage.grid(row=2, column=0, padx=10, pady=10)
+
+def recvMessage():
+    while True:
+        serverMessage = clientSocket.recv(2048).decode("utf-8")
+        txtMessages.insert(END, serverMessage+"\n")
+
+recvThread = Thread(target=recvMessage)
+recvThread.daemon = True
+recvThread.start()
+
+window.mainloop()
