@@ -13,7 +13,7 @@ Comment le faire fonctionner :
 8. Modifier le port (Port = ) et attribuez lui le port ouvert précédement
 9. Lancez le serveur 
 10. Ouvrez le fichier "client.py" dans un editeur de texte
-11. Copiez collez l IP public de votre box (des sites pous propose de la trouver gratuitement) et changez le port par le meme que le serveur
+11. Modifiez l'IP (IP = ) pour celui de la box du serveur
 12. Modifiez votre pseudo (username = )
 13. Executez le script
 14. Parlez librement ! Rien n'est gardé de toute manière ! 
