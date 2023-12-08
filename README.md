@@ -18,6 +18,13 @@ Comment le faire fonctionner :
 13. Executez le script
 14. Parlez librement ! Rien n'est gardé de toute manière ! 
 
-Projet proposé par la UntiltedTeam
 
-passez faire un tour sur notre serveur : discord.gg/hZbyjA7RJ2
+###################################################
+# Made AND claim by VioEnBleu                     #
+# All rights reseved                              #
+# Do not use for comercial issues                 #
+# "In everyone is a dino"                         #
+#                                                 #
+# Creator site :                                  #
+# https://vioenbleu.github.io                     #
+###################################################
