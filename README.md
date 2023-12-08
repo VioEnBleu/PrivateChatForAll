@@ -19,12 +19,12 @@ Comment le faire fonctionner :
 14. Parlez librement ! Rien n'est gardé de toute manière ! 
 
 
-###################################################
-# Made AND claim by VioEnBleu                     #
-# All rights reseved                              #
-# Do not use for comercial issues                 #
-# "In everyone is a dino"                         #
-#                                                 #
-# Creator site :                                  #
-# https://vioenbleu.github.io                     #
-###################################################
+##################################################
+ Made AND claim by VioEnBleu                     #
+ All rights reseved                              #
+ Do not use for comercial issues                 #
+ "In everyone is a dino"                         #
+                                                 #
+ Creator site :                                  #
+ https://vioenbleu.github.io                     #
+##################################################
