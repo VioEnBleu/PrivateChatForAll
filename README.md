@@ -20,11 +20,11 @@ Comment le faire fonctionner :
 
 
 ##################################################
- Made AND claim by VioEnBleu                     #
- All rights reseved                              #
- Do not use for comercial issues                 #
- "In everyone is a dino"                         #
-                                                 #
- Creator site :                                  #
- https://vioenbleu.github.io                     #
+ Made AND claim by VioEnBleu                     
+ All rights reseved                              
+ Do not use for comercial issues                 
+ "In everyone is a dino"                         
+                                                 
+ Creator site :                                  
+ https://vioenbleu.github.io                     
 ##################################################
